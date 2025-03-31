@@ -1,11 +1,14 @@
-const { envs } = require("./config/env");
-const { startServer } = require("./server/server");
+// const { envs } = require("./config/env");
+import { envs } from "./config/env.js"
+
+// const { startServer } = require("./server/server");
+import { startServer } from "./server/server.js"
+
 const main = () => {
   startServer({
     port: envs.PORT,
     public: envs.PUBLIC_PATH,
   });
-  console.log(envs);
 };
 // Función agnóstica autoconvocada
 // Agnóstica porque no tiene nombre
